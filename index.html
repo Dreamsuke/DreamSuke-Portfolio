@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" href="https://scontent.fbkk22-3.fna.fbcdn.net/v/t39.30808-6/240671875_3271105766547585_3447535905199120919_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=On7zC2E9KakAX_GZj5_&_nc_ht=scontent.fbkk22-3.fna&oh=00_AfCY7cxYJBiIreUCd5etTZQNtrDwvptYVA-bIwb3xGet0g&oe=6410595F"/>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #fff;
+        position: relative;
+        background: transparent;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        background: #343434;
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+      }
+
+      a {
+        color: yellow;
+      }
+
+      a:hover {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", sans-serif;
+      }
+
+      #header {
+        transition: ease-in-out 0s;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        z-index: 997;
+        overflow-y: auto;
+      }
+
+      #header * {
+        transition: ease-in-out 0s;
+      }
+
+      #header h1 {
+        font-size: 48px;
+        margin-top: 0px;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #header h1 {
+        transition: 2s;
+      }
+
+      #header h1:hover {
+        font-size: 68px;
+
+      }
+
+      #header h1 a, #header h1 a:hover {
+        color: yellow;
+        line-height: 1;
+        display: inline-block;
+      }
+
+      #header h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        color: yellow;
+      }
+
+      #header h2 span {
+        color: yellow;
+        border-bottom: 2px solid yellow;
+        padding-bottom: 6px;
+      }
+
+      #header img {
+        padding: 0;
+        margin: 0;
+      }
+
+      #header .social-links {
+        margin-top: 40px;
+        display: flex;
+      }
+
+      #header .social-links a {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.1);
+        color: #fff;
+        line-height: 1;
+        margin-right: 8px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+
+      #header .social-links a:hover {
+        background: rgb(0, 0, 0);
+      }
+
+      .nav-menu {
+        margin-top: 35px;
+      }
+
+      .nav-menu ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-menu li + li {
+        margin-left: 30px;
+      }
+
+      .nav-menu a {
+        display: block;
+        position: relative;
+        color: #fff;
+        font-size: 19px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+
+      .nav-menu a:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: yellow;
+        visibility: hidden;
+        width: 0px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+        visibility: visible;
+        width: 25px;
+      }
+
+      .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      #header.header-top {
+        height: 90px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        background: #09203a;
+      }
+
+      #header.header-top .social-links, #header.header-top h2 {
+        display: none;
+      }
+
+      #header.header-top h1 {
+        margin-right: auto;
+        font-size: 36px;
+      }
+
+      #header.header-top .container {
+        display: flex;
+        align-items: center;
+      }
+
+      #header.header-top .nav-menu {
+        margin: 0;
+      }
+
+      audio {
+        filter: sepia(20%) saturate(70%) grayscale(99%) contrast(99%) invert(12%);
+        width: 100px;
+        height: 25px;
+      }
+
+    </style>
+    <link href="path/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="path/icofont/icofont.min.css" rel="stylesheet">
+    <link href="path/remixicon/remixicon.css" rel="stylesheet">
+    <link href="path/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="path/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="path/venobox/venobox.css" rel="stylesheet">
+    
+</head>
+<body>
+    <audio src="/aud/sound.mp3" id="myAudio"></audio>
+    <header id="header" class="header-tops">
+        <div class="container">
+            <h1><a href="#">D'Dream Sira</a>   <span><img width="100px" src="https://i.gifer.com/17xo.gif"></span></h1>
+            <h2 style="color:#fff">I'm <span class="typing" style="color:yellow"></span></h2>
+            <h2 style="color:#fff">My favorite food is <span class="food" style="color:yellow"></span></h2>
+            <h2 style="color:#fff">In my free time i will <span class="freetime" style="color:yellow"></span></h2>
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                  <li class="active"><a href="#header"> <span>Home</span></a></li>
+                  <li><a href="#"><span>Profile</span></a></li>
+                  <li><a href="#"><span>Education</span></a></li>
+                  <li><a href="#"><span>Contact / About</span></a></li>
+                  
+                </ul>
+              </nav>
+            <div class="social-links">
+            <a href="https://www.facebook.com/dreamm.sira/" target="_blank" class="github"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/itspercival_/" target="_blank" class="github"><i class="bx bxl-instagram"></i></a>
+            <a href="https://github.com/Dreamsuke" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+            <img width="100px" src="https://archive.org/download/clickme_202004/tapme.gif" id="myGif">
+        </div>
+    </header>
+    
+
+    <script src="path/jquery/jquery.min.js"></script>
+    <script src="path/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="path/jquery.easing/jquery.easing.min.js"></script>
+    <script src="path/php-email-form/validate.js"></script>
+    <script src="path/waypoints/jquery.waypoints.min.js"></script>
+    <script src="path/counterup/counterup.min.js"></script>
+    <script src="path/owl.carousel/owl.carousel.min.js"></script>
+    <script src="path/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="path/venobox/venobox.min.js"></script>
+    <script src="path/typed.js/typed.min.js"></script>
+    <script type="text/javascript">
+        var typed = new Typed('.typing',{
+          strings: ["Computer Engineer &#128187;", "Developer &#128565;", "Fuck up &#129327;", "Broke &#128184;"],
+          loop: true,
+          typeSpeed: 80,
+          backSpeed: 80
+        });
+    </script>
+    <script type="text/javascript">
+        var typed = new Typed('.freetime',{
+          strings: ["sleep &#128716;", "coding &#128293;", "play video games &#127918;", "listen to music &#127911;"],
+          loop: true,
+          typeSpeed: 80,
+          backSpeed: 80
+        });
+    </script>
+    <script type="text/javascript">
+        var typed = new Typed('.food',{
+          strings: ["Japanese curry &#127835;", "steak &#127830;", "noodle &#127836;", "pizza &#x1F355;"],
+          loop: true,
+          typeSpeed: 80,
+          backSpeed: 80
+        });
+    </script>
+    <script type="text/javascript">
+        var audio = document.getElementById("myAudio");
+        var gif = document.getElementById("myGif");
+        gif.addEventListener("click", function(){
+          audio.play();
+          myGif.src = "https://archive.org/download/spongedance-hd/spongedance-4.gif";
+        });
+    </script>
+    
+    <script src="/Port/index.js"></script>
+</body>
+</html>
